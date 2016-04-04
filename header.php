@@ -1,3 +1,4 @@
+
 <!-- NEED TO MAKE A CHANGE TO THE IF STATEMENT REGARDING SOMETHING HAPPPENING 
 	 IN CASE SOMEONE SIGNS IN INCORRECTLY 
 	 AS OF 3/30 IT JUST UNSUCCESSFULLY TRIES TO LOG IN BUT BECAUSE THE LOG STATUS NEVER GETS CHANGED FROM 0 TO 1 THE PAGE COMES 
@@ -17,6 +18,7 @@
 		<title> Freetime </title>
 		<link rel = "stylesheet" type = "text/css" href ="./general.css" />
 		<link rel = "stylesheet" type = "text/css" href = "./homePage.css" />
+		<link rel = "stylesheet" type = "text/css" href = "./mainContent.css" />
 		<link href='https://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,700,600,800,900'
 		 rel='stylesheet' type='text/css'>
 		<!-- THIS JAVASCRIPT FUNCTION IS INCLUDED BECAUSE THERE IS A LAG BETWEEN WHERE A PAGE ENDS UP AFTER A 
@@ -42,9 +44,12 @@
 	{
 		echo "<body>";
 	}
-	  echo "<div id = 'container'>
-				<div id = 'header'>
-					<div id = 'pageTitle'>";
+	?>
+	  		<div id = 'container'>
+				<div>
+					<div id = 'pageTitle'>
+
+					<?php
 						// LOGSTATUS = 1 MEANS USER IS SIGNED IN 
 						// LOGSTATUS =0 MEANS USER IS NOT SIGNED IN
 						if( ($_SESSION["logStatus"] == 1 ) && ( isset( $_SESSION["logName"] ) ) )
@@ -54,7 +59,9 @@
 						}
 						else
 						{
-							echo "<h1>Welcome to <strong>Freetime</strong>!</h1>";
+							?>
+								<h1>Welcome to <strong>Freetime</strong>!</h1>
+							<?php
 						}
 				echo "</div>"; //ends pageTitle
 		if( $_SERVER["REQUEST_METHOD"] != "POST" )
@@ -62,21 +69,28 @@
 			//EVERYTHING WITHIN THIS IF STATEMENT RIGHT BELOW HERE IS WHAT IS VIEWED AFTER A SUCCESSFUL LOGIN
 			if( ($_SESSION["logStatus"] == 1 ) && ( isset( $_SESSION["logName"] ) ) )
 			{
-				$signOut = "./signOut.php";
+				// $signOut = "./signOut.php";
 				// CLICKING THIS SIGNOUT LINK WILL REDIRECT TO SIGNOUT PAGE 
 				// SIGNOUT PAGE WILL CLEAR ALL SESSION VARIABLES AND REDIRECT BACK TO HOME
-				echo "<p>All Done Here? - <a href = './signOut.php'>Sign Out!</a></p>";
-				// echo "<button onclick = 'window.location.href = " . $signOut . ";'>Sign Out</button>";
 
-				echo "<br /><br /><br />";
-					 //  <div id = 'homePageContent'>
-						// <h4>You're logged the fuck in god damn</h4>
-					 //  </div>";
+
+
+				?>
+				<div class = "LoginOrLogOut">
+					<div id="signOutButton">
+						<p>All Done Here?<a href = './signOut.php'>Sign Out!</a></p>
+					</div>
+				</div>
+
+
+
+			<?php
 			}
 			//THIS ELSE REPRESENTS A NON-REGISTERED USERS HOME SCREEN
 			else
 			{
-				echo "<div id = 'signinForm'>
+				?>
+				 <div class = "LoginOrLogOut">
 						<form method = 'post' action = './signIn.php'>
 							<div id = 'existingUsername'>
 								<p>Username: <input type = 'text' name = 'usernameExist' required /></p>
@@ -88,11 +102,11 @@
 								<input type = 'submit' value = 'Sign In' id = 'submit' />
 							</div>
 						</form>
-					  </div>
+				</div>
 					  <div id = 'homePageContent'>
 					  	<div id = 'aboutFreeTime'>
 					  		<h1>Meet up with<br />you groups.</h1>
-					  		<h2>Compare availibility and see what<br />times work for everyone</h2>
+					  		<h2>Compare availibility and see what<br />times work for everyone.</h2>
 					  	</div>
 					  	<div id = 'signUpForm'>
 					  		<h2>Sign Up For Freetime</h2>
@@ -101,43 +115,22 @@
 						  			<textarea name = 'userName' placeholder = 'Username' required></textarea>
 						  		</div>
 						  		<div id = 'password'>
-						  			<p>Password: <input type = 'password' name = 'passCode' value = 'Password' required /></p>
+						  			<input type = 'password' name = 'passCode' placeholder = 'Password' required /></p>
 						  		</div>
 						  		<div id = 'signUp'>
 						  			<input type = 'submit' value = 'Sign Up' id = 'submit' />
 						  		</div>
 						  	</form>
-						</div>";
+						</div>
+<?php
+
 			}
 		}
-?>
+?>		
+
 				
 
 
-
-
-<!-- 			<div id = "homePageContent">
-				<div id = "aboutFreeTime">
-					<h1>Meet up with<br />your groups.</h1>
-					<h2>Compare availibility and see what<br />times work for 
-						everyone.</h2>
-				</div> 
-				<div id = "signUpForm">
-					<h2>Sign Up For Freetime</h2>
-					<form method = "post" action = "./signUp.php">
-						<input type = "hidden" name = "imperative" value = "signUp" />
-						<div id = "username">
-							<textarea name = "userName" placeholder = "Username" required></textarea>
-						</div>
-						<div id = "password">
-							<p>Password: <input type = "password" name = "passCode" value = "Password" required/> </p>
-						</div>
-						<div id = "signUp">
-							<input type = "submit" value = "Sign Up" id = "submit" />
-						</div>
-					</form>
-				</div>
-			</div> -->
 
 
 
