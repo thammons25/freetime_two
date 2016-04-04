@@ -1,0 +1,125 @@
+
+
+/*****************************
+General CSS
+*****************************/
+
+body {
+	font-family: 'raleway', sans-serif;
+	
+}
+
+#container {
+	width: 100%;
+	margin: auto;
+	color: white;	
+	background: linear-gradient(to bottom right, #66CCCC, #00688B);
+}
+
+h1, h2, h3 {
+	font-weight: 400;
+}
+
+/*****************************
+Header - Title
+*****************************/
+
+#pageTitle {
+	display: block;
+	float: left;
+	width: 60%;
+	text-align: center;
+	padding: 25px 0px;
+}
+
+#pageTitle h1 {
+	margin: 0px; 
+	font-size: 36px;
+}
+
+/*****************************
+Header - Log in or Log out
+*****************************/
+
+
+.LoginOrLogOut {
+	display: block;
+	float: left;
+	width: 40%;
+	padding: 25px 0px;
+}
+
+
+#existingUsername, #existingPassword, #existingSubmit {
+	display: block;
+	float: left;
+}
+
+#existingUsername p, #existingPassword p, #existingSubmit p{
+	margin: 0px;
+	font-size: 16px;
+	letter-spacing: .15em;
+}
+
+#existingUsername {
+	width: 32.5%;
+	margin-right: 2.5%;
+}
+
+#existingPassword {
+	width: 30%;
+	margin-right: 2.5%;
+}
+
+#existingSubmit {
+	width: 15%;
+	margin-right: 17.5%;
+}
+
+#existingUsername input, #existingPassword input {
+	width: 100%;
+	padding: 5px;
+	border: 1px solid #696969;
+}
+
+#existingSubmit input  {
+	font-family: 'raleway', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .15em;
+	font-size: 12px;
+	background-color: white;
+	padding: 5px;
+	margin-top: 18px;
+	border: 1px solid #696969;
+	color: #696969;
+}
+
+
+
+
+/*****************************
+Footer
+*****************************/
+
+footer {
+	clear: both;
+	text-align: center;
+	padding: 15px;
+	
+}
+
+footer p {
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: .2em;
+}
+
+footer img {
+	height: 35px;
+	width: 35px;
+}
+
+.resume {
+	margin: 2.5px;
+}
