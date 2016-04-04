@@ -1,0 +1,100 @@
+
+
+/*****************************
+Page Title
+*****************************/
+
+strong {
+	font-weight: bold;
+}
+
+/*****************************
+About Free Time
+*****************************/
+
+#aboutFreeTime {
+	display: block;
+	float: left; 
+	width: 60%;
+	margin-top: 50px;
+}
+
+#aboutFreeTime h1 {
+	font-size: 48px;
+	font-weight: 500;
+	margin: 25px 60px;
+	line-height: 90%;
+}
+
+#aboutFreeTime h2 {
+	margin: 25px 60px;
+	font-weight: 300;
+}
+
+/*****************************
+Sign Up 
+*****************************/
+
+#signUpForm {
+	display: block;
+	float: left;
+	width: 40%;
+	margin-top: 50px;
+}
+
+#signUpForm h2 {
+	font-size: 32px;
+	font-weight: 600;
+	margin: 25px 0px;
+	text-align: center;
+	width: 85%;
+	margin-right: 15%;
+}
+
+#username textarea, #password input {
+	width: 85%;
+	margin-right: 15%;
+	font-family: 'raleway', 'sans-serif';
+	font-size: 14px;
+	margin-bottom: 10px; 
+	background-color: white;
+	letter-spacing: .15em;
+	padding: 5px 10px;
+	height: 35px;
+	border: 1px solid #696969;
+	text-transform: uppercase;
+}
+
+#username textarea {
+	padding: 10px;
+}
+
+#password input {
+	padding: 5px 10px;
+}
+
+::-webkit-input-placeholder {
+    color: #696969;
+}
+
+#signUp {
+	margin-top: -15px;
+}
+
+#signUp input {
+	width: 85%;
+	margin-right: 15%;
+	border: none;
+	font-family: 'raleway', sans-serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	letter-spacing: .15em;
+	background-color: white;
+	padding: 5px;
+	border: 1px solid #696969;
+	color: #696969;
+	height: 35px;
+	text-transform: uppercase;
+}
+
+
