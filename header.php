@@ -7,10 +7,7 @@
 <?php
 	include './connect.php';
 	session_start();
-	echo "req meth = " . $_SERVER["REQUEST_METHOD"] . "<br />";
-	echo "logStatus = " . $_SESSION["logStatus"] . "<br />";
-	echo "logName = " . $_SESSION["logName"] . "<br />";
-	echo "logID = " . $_SESSION["logID"] . "<br />";
+
 ?>
 
 <html>
